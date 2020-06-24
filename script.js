@@ -10,9 +10,13 @@ $(document).ready(function () {
     // loads the hour in the key local storage
     var time = $(this).parent().attr("id");
 
-    // puts description text in local storage.
+    // puts keyname and value text in local storage.
     localStorage.setItem(time, text);
   });
+});
 
-  $("#hr8 .description").val(localStorage.getItem("hr8"));
+// button that clears out and reloads the page
+$("#cleanSlate").click(function () {
+  localStorage.clear();
+  location.reload();
 });
