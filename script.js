@@ -20,3 +20,18 @@ $("#cleanSlate").click(function () {
   localStorage.clear();
   location.reload();
 });
+
+// $("#hr8 .description").val(localStorage.getItem("hr8"));
+// $("#hr10 .description").val(localStorage.getItem("hr10"));
+
+// Tutor helped with this for loop to retrieve local storage
+
+for (i = 8; i < 18; i++) {
+  $(`#hr${i} .description`).val(localStorage.getItem(`hr${i}`));
+}
+// update hours
+function updateHours() {
+  var currentTime = moment().hours();
+  console.log(currentTime);
+}
+updateHours();
