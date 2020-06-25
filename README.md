@@ -2,7 +2,7 @@
 
 # Screen Capture
 
-![screen capture](assets/images/screen_capture.png)
+![screen capture](assets/images/day_scheduler_screen_capture.png)
 
 # 05 Third-Party APIs: Work Day Scheduler
 
