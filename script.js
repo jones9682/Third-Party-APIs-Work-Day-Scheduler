@@ -26,12 +26,30 @@ $("#cleanSlate").click(function () {
 
 // Tutor helped with this for loop to retrieve local storage
 
-for (i = 8; i < 18; i++) {
-  $(`#hr${i} .description`).val(localStorage.getItem(`hr${i}`));
-}
 // update hours
 function updateHours() {
-  var currentTime = moment().hours();
-  console.log(currentTime);
+  var currentHour = moment().hours();
+  console.log(currentHour);
+  for (i = 8; i < 18; i++) {
+    $(`#hr${i} .description`).val(localStorage.getItem(`hr${i}`));
+    // $(`#hr${i},)
+
+    if (i < currentHour) {
+      //  block of code to be executed if condition1 is true
+      $(`#hr${i}`).addClass("past");
+      $(`#hr${i}`).removeClass("future");
+      $(`#hr${i}`).removeClass("present");
+    } else if (i === currentHour) {
+      //  block of code to be executed if the condition1 is false and condition2 is true
+      $(`#hr${i}`).removeClass("past");
+      $(`#hr${i}`).addClass("present");
+      $(`#hr${i}`).removeClass("future");
+    } else {
+      //  block of code to be executed if the condition1 is false and condition2 is false
+      $(`#hr${i}`).removeClass("present");
+      $(`#hr${i}`).removeClass("past");
+      $(`#hr${i}`).addClass("future");
+    }
+  }
 }
 updateHours();
