@@ -1,4 +1,4 @@
-# deployed Link
+# Application Link
 
 Website URL: https://jones9682.github.io/Third-Party-APIs-Work-Day-Scheduler/
 
